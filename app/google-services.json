@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "108471653138",
+    "firebase_url": "https://calorie-counter-ub.firebaseio.com",
+    "project_id": "calorie-counter-ub",
+    "storage_bucket": "calorie-counter-ub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108471653138:android:501fd22fd24cd26c",
+        "android_client_info": {
+          "package_name": "dushanes.caloriecounterub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108471653138-lpdhkm0aniob777egao6hbf6b2jcu2o1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dushanes.caloriecounterub",
+            "certificate_hash": "fcd7065cc1685172ddde4f68f039e0f1d23390ab"
+          }
+        },
+        {
+          "client_id": "108471653138-4q87iktbb14ctrbaro4pbh9fs4pdjpb6.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "108471653138-4q87iktbb14ctrbaro4pbh9fs4pdjpb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYMONDJWY9MaLE3qF4i3EdunRQIlhsShQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108471653138-4q87iktbb14ctrbaro4pbh9fs4pdjpb6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

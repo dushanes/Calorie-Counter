@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Calorie Counter UB</string>
+    <string name="goal_text">Goal</string>
+    <string name="food_text">Food</string>
+    <string name="exe_text">Exercise</string>
+    <string name="summary">Summary</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="snack">Snack</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="password">password</string>
+    <string name="log_in">Log in</string>
+    <string name="email">Email</string>
+    <string name="f_password">Forgot Password</string>
+    <string name="equal">=</string>
+    <string name="newUser">New User</string>
+    <string name="welcome">Welcome!</string>
+    <string name="welcomeMessage">Please complete the form below</string>
+    <string name="textViewName">Name:</string>
+    <string name="textViewAge">Age:</string>
+    <string name="textViewWeight">Weight:</string>
+    <string name="textViewHeight">Height:</string>
+    <string name="textViewPound">Pounds</string>
+    <string name="textViewActivityLevel">Activity Level:</string>
+    <string name="radioButtonSed">Sedentary</string>
+    <string name="radioButtonActive">Active</string>
+    <string name="radioButtonLightActive">Lightly Actively</string>
+    <string name="radioButtonVeryActive">Very Active</string>
+    <string name="buttonSave">Save</string>
+    <string name="inches">Inches</string>
+    <string name="gender">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+</resources>

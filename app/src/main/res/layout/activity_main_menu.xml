@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu"
+    tools:layout_editor_absoluteY="81dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/summary" />
+
+            <TextView
+                android:id="@+id/goal_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="7pt" />
+
+            <TextView
+                android:id="@+id/goal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goal_cal"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/goal_text"
+                android:textSize="5.5pt" />
+
+            <TextView
+                android:id="@+id/food_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/goal_cal"
+                android:layout_marginStart="35dp"
+                android:layout_toEndOf="@id/goal_cal"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="7pt" />
+
+            <TextView
+                android:id="@+id/food_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/goal_text"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/goal_text"
+                android:gravity="center"
+                android:text="@string/food_text"
+                android:textSize="5.5pt" />
+
+            <TextView
+                android:id="@+id/exe_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/food_cal"
+                android:layout_marginStart="35dp"
+                android:layout_toEndOf="@id/food_cal"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="7pt" />
+
+            <TextView
+                android:id="@+id/exe_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/goal_text"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/food_text"
+                android:gravity="center"
+                android:text="@string/exe_text"
+                android:textSize="5.5pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/goal_cal"
+                android:text="@string/minus"
+                android:textSize="12pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/food_cal"
+                android:text="@string/plus"
+                android:textSize="12pt" />
+
+            <TextView
+                android:id="@+id/equal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/exe_cal"
+                android:text="@string/equal"
+                android:textSize="12pt" />
+
+            <TextView
+                android:id="@+id/remaining_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="7dp"
+                android:layout_toEndOf="@id/equal"
+                android:text="TextView"
+                android:textColor="#3663d3"
+                android:textSize="7.25pt" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="368dp"
+        android:layout_height="98dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/breakfast" />
+
+            <TextView
+                android:id="@+id/Break_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="275dp"
+                android:layout_marginTop="3dp"
+                android:text="Cal" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:background="?android:attr/listDivider" />
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

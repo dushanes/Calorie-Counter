@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewUserInfoInput">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/fjalla_one"
+        android:text="@string/welcome"
+        android:textColor="@android:color/background_dark"
+        android:textSize="12pt" />
+
+    <TextView
+        android:id="@+id/textViewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewName"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="22dp"
+        android:textColor="@android:color/background_dark"
+        android:text="@string/gender"/>
+
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="@string/welcomeMessage"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeMessage"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/textViewName"
+        android:textColor="@android:color/background_dark"
+        android:textSize="6pt" />
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewGender"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/textViewAge"
+        android:textColor="@android:color/background_dark"
+        android:textSize="6pt" />
+
+    <TextView
+        android:id="@+id/textViewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAge"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/textViewWeight"
+        android:textColor="@android:color/background_dark"
+        android:textSize="6pt" />
+
+    <TextView
+        android:id="@+id/textViewHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewWeight"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/textViewHeight"
+        android:textColor="@android:color/background_dark"
+        android:textSize="6pt" />
+
+    <TextView
+        android:id="@+id/textViewActivityLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewHeight"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/textViewActivityLevel"
+        android:textColor="@android:color/background_dark"
+        android:textSize="6pt" />
+
+    <TextView
+        android:id="@+id/textViewPound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAge"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@id/editTextWeight"
+        android:text="@string/textViewPound"
+        android:textColor="@android:color/background_dark"
+        android:textSize="6pt" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:inputType="textPersonName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textViewName"
+        android:layout_alignBaseline="@id/textViewName"
+        android:layout_marginStart="50dp"
+        android:textSize="5pt"/>
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textViewAge"
+        android:layout_alignBaseline="@id/textViewAge"
+        android:layout_marginStart="60dp"
+        android:inputType="number"
+        android:textSize="5pt"/>
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textViewWeight"
+        android:layout_alignBaseline="@id/textViewWeight"
+        android:layout_marginStart="45dp"
+        android:inputType="numberDecimal"
+        android:textSize="5pt"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewActivityLevel"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonSed"
+                android:layout_width="97dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:onClick="checkButton"
+                android:text="@string/radioButtonSed"
+                android:textSize="5.5pt" />
+
+            <RadioButton
+                android:id="@+id/radioButtonLightActive"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="20dp"
+                android:onClick="checkButton"
+                android:text="@string/radioButtonLightActive"
+                android:textSize="5.5pt" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:onClick="checkButton"
+                android:text="@string/radioButtonActive"
+                android:textSize="5.5pt" />
+
+            <RadioButton
+                android:id="@+id/radioButtonVeryActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="123dp"
+                android:layout_marginTop="20dp"
+                android:onClick="checkButton"
+                android:text="@string/radioButtonVeryActive"
+                android:textSize="5.5pt" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignEnd="@id/welcomeMessage"
+        android:layout_below="@id/editTextName"
+        android:layout_marginTop="10dp">
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButtonGender"
+            android:text="@string/male"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:onClick="checkButtonGender"
+            android:text="@string/female"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/holo_blue_light"
+        android:elevation="20dp"
+        android:shadowRadius="5"
+        android:text="@string/buttonSave"
+        android:textColor="@android:color/background_light"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="74dp"
+        android:layout_height="32dp"
+        android:layout_alignStart="@+id/welcome"
+        android:layout_below="@id/editTextWeight"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="5pt" />
+
+    <TextView
+        android:id="@+id/textViewInches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPound"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/textViewPound"
+        android:text="@string/inches"
+        android:textColor="@android:color/background_dark"
+        android:textSize="6pt" />
+
+</RelativeLayout>
