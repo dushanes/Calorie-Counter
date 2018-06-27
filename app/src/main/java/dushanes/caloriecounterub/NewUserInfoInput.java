@@ -11,10 +11,10 @@ import android.widget.Toast;
 
 public class NewUserInfoInput extends AppCompatActivity {
 
-    private EditText editTextAge = (EditText) findViewById(R.id.editTextAge);
-    private EditText editTextName = (EditText) findViewById(R.id.editTextName);;
-    private EditText editTextHeight = (EditText) findViewById(R.id.editTextHeight);
-    private EditText editTextWeight = (EditText) findViewById(R.id.editTextWeight);;
+    public EditText editTextAge;
+    public EditText editTextName;;
+    public EditText editTextHeight;
+    public EditText editTextWeight;;
 
     private RadioGroup radioGroup;
     private RadioButton radioButton;
@@ -26,6 +26,11 @@ public class NewUserInfoInput extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user_info_input);
+
+        editTextAge = (EditText) findViewById(R.id.editTextAge);
+        editTextName = (EditText) findViewById(R.id.editTextName);;
+        editTextHeight = (EditText) findViewById(R.id.editTextHeight);
+        editTextWeight = (EditText) findViewById(R.id.editTextWeight);;
 
         radioGroup = findViewById(R.id.radioGroup);
         //radioButton = findViewById(R.id.radioButtonSed);
