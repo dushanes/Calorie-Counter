@@ -33,4 +33,11 @@
     <string name="gender">Gender:</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+
+    <string-array name="activityLevel">
+        <item>Sedentary</item>
+        <item>Lightly Active</item>
+        <item>Active</item>
+        <item>Very Active</item>
+    </string-array>
 </resources>
