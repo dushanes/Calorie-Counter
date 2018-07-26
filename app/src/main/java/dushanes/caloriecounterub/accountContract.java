@@ -1,7 +1,4 @@
 package dushanes.caloriecounterub;
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
 public final class accountContract{
 

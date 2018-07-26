@@ -91,12 +91,13 @@ public class NewUserInfoInput extends AppCompatActivity {
         }else{
             calories = 10 * weightKg + 6.25 * heightCm - 5 * Double.parseDouble(age) - 161;
         }
+        user person = (user) getIntent().getSerializableExtra("user");
 
-        //calories = calories * multiplier;
         calories = Math.floor(calories * multiplier);
 
         ContentValues content = new ContentValues();
 
+        content.put(healthInfoContract.healthInfo.columnId, person.getId());
         content.put(healthInfoContract.healthInfo.columnName, name);
         content.put(healthInfoContract.healthInfo.columnGender, gender);
         content.put(healthInfoContract.healthInfo.columnAge, age);
@@ -107,7 +108,11 @@ public class NewUserInfoInput extends AppCompatActivity {
         content.put(healthInfoContract.healthInfo.columnBmi, bmi);
 
         dbWrite.insert(healthInfoContract.healthInfo.tableName, null, content);
-        startActivity(new Intent(this, MainMenu.class));
+        Intent intent = new Intent(this, MainMenu.class);
+        person.setName(name);
+        person.setCalories((int)(calories));
+        intent.putExtra("user", person);
+        startActivity(intent);
     }
 
     public void checkButtonGender(View v){

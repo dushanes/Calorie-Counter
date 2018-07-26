@@ -26,7 +26,7 @@ public final class healthInfoContract{
                     healthInfo.columnWeight + " TEXT," +
                     healthInfo.columnHeight + " TEXT," +
                     healthInfo.columnActivity + " TEXT," +
-                    healthInfo.columnCalories + " TEXT," +
+                    healthInfo.columnCalories + " INTEGER," +
                     healthInfo.columnBmi + " TEXT)";
 
     public static final String sqlDeleteTable =

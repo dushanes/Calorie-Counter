@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void newUser(){
+        user person;
+
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();
 
@@ -85,10 +87,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else {
             long newUserId = dbWrite.insert(accountContract.accountInfo.tableName, null, values);
             Toast.makeText(MainActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-            cursor.close();
-            startActivity(new Intent(this, NewUserInfoInput.class));
-        }
+            person = new user((int)newUserId, email);
 
+            Intent intent = new Intent(this, NewUserInfoInput.class);
+            intent.putExtra("user", person);
+            startActivity(intent);
+        }
+        cursor.close();
     }
 
     private void login(){
@@ -96,6 +101,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(MainActivity.this, "LOCKED OUT. Too many attempts", Toast.LENGTH_SHORT).show();
             return;
         }
+        user person;
+
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
@@ -105,11 +112,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "Invalid Email or Password", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        ContentValues values = new ContentValues();
-
-        values.put(accountContract.accountInfo.columnEmail, email);
-        values.put(accountContract.accountInfo.columnPassword, password);
 
         String[] projection = {
                 accountContract.accountInfo.columnId,
@@ -135,7 +137,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String test = cursor.getString(2);
             if (test.equals(password)){
                 Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, MainMenu.class));
+
+                person = new user(Integer.parseInt(cursor.getString(0)), cursor.getString(1));
+                grabInfo(person);
+
+                Intent intent = new Intent(MainActivity.this, MainMenu.class);
+                intent.putExtra("user", person);
+                startActivity(intent);
             }else{
                 Toast.makeText(MainActivity.this, "Incorrect Password", Toast.LENGTH_SHORT).show();
                 loginAttempts++;
@@ -160,5 +168,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if (view == buttonNewUser){
             newUser();
         }
+    }
+
+    public void grabInfo(user user){
+        healthInfoDbHelper hDbHelper = new healthInfoDbHelper(this);
+        SQLiteDatabase hDbRead = hDbHelper.getReadableDatabase();
+
+        String[] projection = {
+                healthInfoContract.healthInfo.columnId,
+                healthInfoContract.healthInfo.columnName,
+                healthInfoContract.healthInfo.columnCalories
+        };
+
+        String selection = healthInfoContract.healthInfo.columnId + " = ?";
+        String sort = accountContract.accountInfo.columnId + " DESC";
+        String arg[] = {Integer.toString(user.getId())};
+
+        Cursor cursor = hDbRead.query(
+                healthInfoContract.healthInfo.tableName,
+                projection,
+                selection,
+                arg,
+                null,
+                null,
+                sort
+        );
+        if (cursor.moveToFirst()) {
+            user.setName(cursor.getString(1));
+            user.setCalories(cursor.getInt(2));
+        }
+
+        cursor.close();
     }
 }

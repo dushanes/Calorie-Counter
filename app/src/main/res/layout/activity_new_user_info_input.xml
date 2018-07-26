@@ -179,7 +179,7 @@
         android:layout_alignBaseline="@id/textViewHeight"
         android:layout_marginTop="7dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="17sp" />
 
     <TextView
