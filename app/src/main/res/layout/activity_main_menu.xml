@@ -35,11 +35,12 @@
 
             <TextView
                 android:id="@+id/goal_cal"
-                android:layout_width="wrap_content"
+                android:layout_width="65dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
-                android:text="TextView"
+                android:textAlignment="center"
+                android:text="0"
                 android:textColor="@android:color/black"
                 android:textSize="7pt" />
 
@@ -56,12 +57,13 @@
 
             <TextView
                 android:id="@+id/food_cal"
-                android:layout_width="wrap_content"
+                android:layout_width="65dp"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:layout_alignBaseline="@id/goal_cal"
                 android:layout_marginStart="35dp"
                 android:layout_toEndOf="@id/goal_cal"
-                android:text="TextView"
+                android:text="0"
                 android:textColor="@android:color/black"
                 android:textSize="7pt" />
 
@@ -79,12 +81,13 @@
 
             <TextView
                 android:id="@+id/exe_cal"
-                android:layout_width="wrap_content"
+                android:layout_width="65dp"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:layout_alignBaseline="@id/food_cal"
                 android:layout_marginStart="35dp"
                 android:layout_toEndOf="@id/food_cal"
-                android:text="TextView"
+                android:text="0"
                 android:textColor="@android:color/black"
                 android:textSize="7pt" />
 
@@ -93,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/goal_text"
-                android:layout_marginStart="70dp"
+                android:layout_marginStart="65dp"
                 android:layout_marginTop="10dp"
                 android:layout_toEndOf="@id/food_text"
                 android:gravity="center"
@@ -130,12 +133,13 @@
 
             <TextView
                 android:id="@+id/remaining_cal"
-                android:layout_width="wrap_content"
+                android:layout_width="65dp"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="7dp"
                 android:layout_toEndOf="@id/equal"
-                android:text="TextView"
+                android:text="0"
                 android:textColor="#3663d3"
                 android:textSize="7.25pt" />
 
