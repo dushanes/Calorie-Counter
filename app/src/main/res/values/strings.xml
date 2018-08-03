@@ -24,15 +24,14 @@
     <string name="textViewHeight">Height:</string>
     <string name="textViewPound">Pounds</string>
     <string name="textViewActivityLevel">Activity Level:</string>
-    <string name="radioButtonSed">Sedentary</string>
-    <string name="radioButtonActive">Active</string>
-    <string name="radioButtonLightActive">Lightly Actively</string>
-    <string name="radioButtonVeryActive">Very Active</string>
     <string name="buttonSave">Save</string>
     <string name="inches">Inches</string>
     <string name="gender">Gender:</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="Proteins">Protein</string>
+    <string name="Carbs">Carbs</string>
+    <string name="Fats">Fat</string>
 
     <string-array name="activityLevel">
         <item>Sedentary</item>

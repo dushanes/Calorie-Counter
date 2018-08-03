@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapter.viewHolder>{
 
     private static final String TAG = "recyclerViewAdapter";
-    private String[] dataset;
+    private String[] dataSet;
     private Context context;
 
     public static class viewHolder extends RecyclerView.ViewHolder {
@@ -28,7 +28,7 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
     }
 
     public recyclerViewAdapter(String[] data, Context context) {
-        this.dataset = data;
+        this.dataSet = data;
         this.context = context;
     }
 
@@ -45,11 +45,11 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
     @Override
     public void onBindViewHolder(viewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder has been called");
-        holder.foodNameText.setText(dataset[position]);
+        holder.foodNameText.setText(dataSet[position]);
     }
 
     @Override
     public int getItemCount() {
-        return dataset.length;
+        return dataSet.length;
     }
 }

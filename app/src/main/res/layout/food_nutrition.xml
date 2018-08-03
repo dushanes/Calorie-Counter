@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/foodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Food Name"
+        android:textSize="17sp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/macrosText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Macros"
+        android:layout_below="@+id/foodName"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/CarbsText"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/Carbs"
+        android:layout_below="@+id/macrosText"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/proteinsText"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Proteins"
+        android:layout_below="@id/macrosText"
+        android:layout_toStartOf="@id/CarbsText"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="45dp"/>
+
+    <TextView
+        android:id="@+id/fatsText"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Fats"
+        android:textAlignment="center"
+        android:layout_below="@id/macrosText"
+        android:layout_toEndOf="@id/CarbsText"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="45dp"/>
+
+    <TextView
+        android:id="@+id/CarbsValue"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="000g"
+        android:textSize="25sp"
+        android:layout_below="@id/macrosText"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/proteinsValue"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="000g"
+        android:textSize="25sp"
+        android:layout_toStartOf="@id/CarbsValue"
+        android:layout_below="@id/macrosText"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="45dp"/>
+
+    <TextView
+        android:id="@+id/fatsValue"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="000g"
+        android:textAlignment="textEnd"
+        android:textSize="25sp"
+        android:layout_toEndOf="@id/CarbsValue"
+        android:layout_below="@id/macrosText"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/foodCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories:"
+        android:layout_below="@id/proteinsText"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/calcium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcium:"
+        android:layout_below="@id/foodCalories"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/Cholesterol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cholesterol:"
+        android:layout_below="@id/calcium"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/sugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sugar:"
+        android:layout_below="@id/Cholesterol"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/iron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iron:"
+        android:layout_below="@id/sugar"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/fiber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fiber:"
+        android:layout_below="@id/iron"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/folate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Folate:"
+        android:layout_below="@id/fiber"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/potassium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Potassium:"
+        android:layout_below="@id/folate"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/magnesium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magnesium:"
+        android:layout_below="@id/potassium"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/sodium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sodium:"
+        android:layout_below="@id/magnesium"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/foodCaloriesValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/proteinsText"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/calciumValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/foodCaloriesValue"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/CholesterolValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/calciumValues"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/sugarValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/CholesterolValue"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/ironValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/sugarValue"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/fiberValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/ironValue"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/folateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/fiberValue"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/potassiumValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/folateValue"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/magnesiumValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/potassiumValue"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/sodiumValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_below="@id/magnesiumValue"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/foodCalories"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/mono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mono:"
+        android:layout_below="@id/foodCalories"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+    <TextView
+        android:id="@+id/poly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poly:"
+        android:layout_below="@id/foodCalories"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/macrosText"/>
+
+
+</RelativeLayout>
