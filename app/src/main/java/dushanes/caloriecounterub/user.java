@@ -9,13 +9,13 @@ class user implements Serializable{
     public user(int i, String e){
         this.id = i;
         this.email = e;
-    };
+    }
 
     public String name;
 
     public String email;
 
-    private int id;
+    public int id;
 
     public int calories;
 

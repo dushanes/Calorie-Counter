@@ -26,32 +26,35 @@
         android:id="@+id/CarbsText"
         android:layout_width="55dp"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="@string/Carbs"
         android:layout_below="@+id/macrosText"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/Carbs"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark" />
 
     <TextView
         android:id="@+id/proteinsText"
         android:layout_width="55dp"
         android:layout_height="wrap_content"
-        android:text="@string/Proteins"
         android:layout_below="@id/macrosText"
-        android:layout_toStartOf="@id/CarbsText"
         android:layout_marginEnd="50dp"
-        android:layout_marginTop="45dp"/>
+        android:layout_marginTop="45dp"
+        android:layout_toStartOf="@id/CarbsText"
+        android:text="@string/Proteins"
+        android:textColor="@android:color/holo_blue_dark" />
 
     <TextView
         android:id="@+id/fatsText"
         android:layout_width="55dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/macrosText"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="45dp"
+        android:layout_toEndOf="@id/CarbsText"
         android:text="@string/Fats"
         android:textAlignment="center"
-        android:layout_below="@id/macrosText"
-        android:layout_toEndOf="@id/CarbsText"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="45dp"/>
+        android:textColor="@android:color/holo_red_dark" />
 
     <TextView
         android:id="@+id/CarbsValue"

@@ -8,6 +8,11 @@ import android.text.TextUtils;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import dushanes.caloriecounterub.Database.accountContract;
+import dushanes.caloriecounterub.Database.accountDbHelper;
+import dushanes.caloriecounterub.Database.healthInfoContract;
+import dushanes.caloriecounterub.Database.healthInfoDbHelper;
+
 public class loginTasks implements Runnable {
     EditText editTextEmail;
     EditText editTextPassword;

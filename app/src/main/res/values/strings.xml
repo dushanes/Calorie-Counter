@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calorie Counter UB</string>
+    <string name="app_name">Calorie Counter</string>
     <string name="goal_text">Goal</string>
     <string name="food_text">Food</string>
     <string name="exe_text">Exercise</string>
@@ -32,6 +32,11 @@
     <string name="Proteins">Protein</string>
     <string name="Carbs">Carbs</string>
     <string name="Fats">Fat</string>
+    <string name="Brand">Brand</string>
+    <string name="Calories">Calories</string>
+    <string name="Account">My Account</string>
+    <string name="Settings">Settings</string>
+    <string name="Diary">Diary</string>
 
     <string-array name="activityLevel">
         <item>Sedentary</item>

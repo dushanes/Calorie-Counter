@@ -114,6 +114,7 @@
                 android:id="@+id/summary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingStart="10sp"
                 android:layout_marginEnd="3dp"
                 android:layout_marginTop="4dp"
                 android:text="@string/summary" />
@@ -278,45 +279,45 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="#6daaaaaa"
+                app:layout_constraintBottom_toTopOf="@+id/recycleBreak"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycleBreak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/bottomBarBreakfast"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/headerView" />
 
             <View
                 android:id="@+id/bottomBarBreakfast"
-                android:layout_width="315dp"
-                android:layout_height="32dp"
-                android:background="@android:color/holo_blue_dark"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recycleBreak" />
-
-            <View
-                android:id="@+id/bottomBarPlusBreakfast"
                 android:layout_width="0dp"
                 android:layout_height="32dp"
-                android:clickable="true"
-                android:focusable="true"
-                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                android:background="@android:color/holo_blue_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/bottomBarBreakfast"
-                tools:background="@android:color/holo_blue_light" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycleBreak"
+                android:focusable="true"
+                android:clickable="true"
+                android:onClick="addFood"/>
 
             <TextView
-                android:id="@+id/textView2"
-                android:layout_width="18dp"
+                android:id="@+id/textViewBreakPlus"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:text="@string/plus"
                 android:textColor="@android:color/background_light"
                 android:textSize="23sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/bottomBarPlusBreakfast"
-                app:layout_constraintTop_toBottomOf="@+id/recycleBreak" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/bottomBarBreakfast"
+                app:layout_constraintStart_toStartOf="@+id/bottomBarBreakfast" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -375,27 +376,24 @@
                 android:id="@+id/recycleLunch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/bottomBarLunch"
                 app:layout_constraintTop_toBottomOf="@id/headerViewLunch" />
 
             <View
                 android:id="@+id/bottomBarLunch"
-                android:layout_width="315dp"
+                android:layout_width="0dp"
                 android:layout_height="32dp"
                 android:background="@android:color/holo_blue_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recycleLunch" />
-
-            <View
-                android:id="@+id/bottomBarPlusLunch"
-                android:layout_width="55dp"
-                android:layout_height="32dp"
-                android:clickable="true"
+                app:layout_constraintTop_toBottomOf="@id/recycleLunch"
                 android:focusable="true"
-                app:layout_constraintStart_toEndOf="@+id/bottomBarLunch"
-                app:layout_constraintTop_toBottomOf="@+id/recycleLunch"
-                tools:background="@android:color/holo_blue_light" />
+                android:clickable="true"
+                android:onClick="addFood"/>
 
             <TextView
+                android:id="@+id/textViewLunchPlus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -403,9 +401,9 @@
                 android:text="@string/plus"
                 android:textColor="@android:color/background_light"
                 android:textSize="23sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/bottomBarPlusLunch"
-                app:layout_constraintTop_toBottomOf="@+id/recycleLunch" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/bottomBarLunch"
+                app:layout_constraintStart_toStartOf="@+id/bottomBarLunch" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -464,37 +462,33 @@
                 android:id="@+id/recycleDinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/bottomBarDinner"
                 app:layout_constraintTop_toBottomOf="@id/headerViewDinner" />
 
             <View
                 android:id="@+id/bottomBarDinner"
-                android:layout_width="315dp"
+                android:layout_width="0dp"
                 android:layout_height="32dp"
                 android:background="@android:color/holo_blue_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recycleDinner" />
-
-            <View
-                android:id="@+id/bottomBarPlusDinner"
-                android:layout_width="55dp"
-                android:layout_height="32dp"
-                android:clickable="true"
+                app:layout_constraintTop_toBottomOf="@id/recycleDinner"
                 android:focusable="true"
-                app:layout_constraintStart_toEndOf="@+id/bottomBarDinner"
-                app:layout_constraintTop_toBottomOf="@+id/recycleDinner"
-                tools:background="@android:color/holo_blue_light" />
+                android:clickable="true"
+                android:onClick="addFood"/>
 
             <TextView
+                android:id="@+id/textViewDinnerPlus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:text="@string/plus"
                 android:textColor="@android:color/background_light"
                 android:textSize="23sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/bottomBarPlusDinner"
-                app:layout_constraintTop_toBottomOf="@+id/recycleDinner" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/bottomBarDinner"
+                app:layout_constraintStart_toStartOf="@+id/bottomBarDinner" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -553,27 +547,24 @@
                 android:id="@+id/recycleSnack"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/bottomBarSnack"
                 app:layout_constraintTop_toBottomOf="@id/headerViewSnack" />
 
             <View
                 android:id="@+id/bottomBarSnack"
-                android:layout_width="315dp"
+                android:layout_width="0dp"
                 android:layout_height="32dp"
                 android:background="@android:color/holo_blue_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recycleSnack" />
-
-            <View
-                android:id="@+id/bottomBarPlusSnack"
-                android:layout_width="55dp"
-                android:layout_height="32dp"
-                android:clickable="true"
+                app:layout_constraintTop_toBottomOf="@id/recycleSnack"
                 android:focusable="true"
-                app:layout_constraintStart_toEndOf="@+id/bottomBarSnack"
-                app:layout_constraintTop_toBottomOf="@+id/recycleSnack"
-                tools:background="@android:color/holo_blue_light" />
+                android:clickable="true"
+                android:onClick="addFood"/>
 
             <TextView
+                android:id="@+id/textViewSnackPlus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -581,9 +572,9 @@
                 android:text="@string/plus"
                 android:textColor="@android:color/background_light"
                 android:textSize="23sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/bottomBarPlusSnack"
-                app:layout_constraintTop_toBottomOf="@+id/recycleSnack" />
+                app:layout_constraintStart_toStartOf="@+id/bottomBarSnack" />
 
         </android.support.constraint.ConstraintLayout>
 

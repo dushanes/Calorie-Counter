@@ -9,6 +9,9 @@ import android.text.TextUtils;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import dushanes.caloriecounterub.Database.accountContract;
+import dushanes.caloriecounterub.Database.accountDbHelper;
+
 public class newUserTask implements Runnable {
 
     EditText editTextEmail;

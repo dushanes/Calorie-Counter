@@ -1,6 +1,5 @@
 package dushanes.caloriecounterub;
 
-import android.content.ClipData;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,7 +14,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.io.Console;
+import dushanes.caloriecounterub.Database.healthInfoContract;
+import dushanes.caloriecounterub.Database.healthInfoDbHelper;
 
 public class NewUserInfoInput extends AppCompatActivity {
 

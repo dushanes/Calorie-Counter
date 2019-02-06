@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/actionAccount"
+        android:title="@string/Account"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/actionDiary"
+        android:title="@string/Diary"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/actionSettings"
+        android:title="@string/Settings"
+        app:showAsAction="never"/>
+</menu>
