@@ -22,7 +22,7 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
     public static class viewHolder extends RecyclerView.ViewHolder {
         public TextView foodNameText;
         public TextView caloriesText;
-        private TextView brandText;
+        public TextView brandText;
         RelativeLayout layout;
         public viewHolder(View v){
             super(v);
@@ -42,7 +42,7 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
     public recyclerViewAdapter.viewHolder onCreateViewHolder(ViewGroup parent, int type){
         //Log.d(TAG, "onCreateViewHolder has been called");
         View v =  LayoutInflater.from(parent.getContext()).
-                inflate(R.layout.recycler_view_main_menu, parent, false);
+                inflate(R.layout.recycler_view_search_page, parent, false);
 
         viewHolder vh = new viewHolder(v);
         return vh;
@@ -53,9 +53,12 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
         //Log.d(TAG, "onBindViewHolder has been called");
         holder.foodNameText.setText(dataSet.get(position).getName());
         holder.caloriesText.setText(String.format(Integer.toString(dataSet.get(position).getCalories())));
+        String brand = dataSet.get(position).getBrand();
 
-        if (!dataSet.get(position).getBrand().equals("")) {
-            holder.brandText.setText(dataSet.get(position).getBrand());
+        if (dataSet.get(position).getBrand() != null) {
+            holder.brandText.setText(brand);
+        }else{
+            holder.brandText.setText("");
         }
     }
 

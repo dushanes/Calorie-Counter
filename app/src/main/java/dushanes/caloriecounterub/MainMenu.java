@@ -20,22 +20,23 @@ import dushanes.caloriecounterub.model.foodItem;
 
 public class MainMenu extends AppCompatActivity {
     private RecyclerView mRecyclerViewBreak;
-    private Calendar today;
-    public ArrayList <foodItem>data = new ArrayList<>();
+    public TextView textViewCalories;
     public static TextView date;
+    public Calendar today;
+    public ArrayList <foodItem>data = new ArrayList<>();
+    public user person;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        user person;
-        TextView textViewCalories = findViewById(R.id.goal_cal);
 
         person = (user) getIntent().getSerializableExtra("user");
-
         date = findViewById(R.id.dateText);
+        textViewCalories = findViewById(R.id.goal_cal);
         mRecyclerViewBreak = findViewById(R.id.recycleBreak);
+
         textViewCalories.setText(String.format(Locale.ENGLISH, "%d", person.calories));
 
                     //Setting today's date

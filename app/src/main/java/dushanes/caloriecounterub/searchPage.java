@@ -91,7 +91,10 @@ public class searchPage extends AppCompatActivity {
                     JSONArray measureArray = null;
                     JSONObject nutrientsObject = null;
                     foodItem foodItem = null;
-                    String brand = "";
+                    String brand = null;
+                    int fat = 0;
+                    int protein = 0;
+                    int carbs = 0;
 
                     for (int i = 0; i < hits.length(); ++i){
                         o = hits.getJSONObject(i);
@@ -99,17 +102,29 @@ public class searchPage extends AppCompatActivity {
                         measureArray = o.getJSONArray("measures");
                         nutrientsObject = foodObject.getJSONObject("nutrients");
 
-                        if(foodObject.has(brand)){
+                        if(foodObject.has("brand")){
                             brand = foodObject.getString("brand");
+                        }
+
+                        if(foodObject.has("FAT")){
+                            fat = foodObject.getInt("FAT");
+                        }
+
+                        if(foodObject.has("CHOCDF")){
+                            carbs = foodObject.getInt("CHOCDF");
+                        }
+
+                        if(foodObject.has("PROCNT")){
+                            protein = foodObject.getInt("PROCNT");
                         }
 
                         foodItem = new foodItem(
                                 foodObject.getString("label"),
                                 brand,
                                 nutrientsObject.getInt("ENERC_KCAL"),
-                                nutrientsObject.getInt("CHOCDF"),
-                                nutrientsObject.getInt("PROCNT"),
-                                nutrientsObject.getInt("FAT")
+                                carbs,
+                                protein,
+                                fat
                         );
 
                         data.add(foodItem);
