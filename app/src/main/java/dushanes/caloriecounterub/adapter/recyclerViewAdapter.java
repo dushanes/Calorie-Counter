@@ -1,6 +1,7 @@
 package dushanes.caloriecounterub.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,11 +21,12 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
     private Context context;
 
     public static class viewHolder extends RecyclerView.ViewHolder {
-        public TextView foodNameText;
-        public TextView caloriesText;
-        public TextView brandText;
+        private TextView foodNameText;
+        private TextView caloriesText;
+        private TextView brandText;
         RelativeLayout layout;
-        public viewHolder(View v){
+
+        private viewHolder(View v){
             super(v);
             foodNameText = v.findViewById(R.id.foodName);
             caloriesText = v.findViewById(R.id.foodCalories);
@@ -38,18 +40,18 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
         this.context = context;
     }
 
+    @NonNull
     @Override
-    public recyclerViewAdapter.viewHolder onCreateViewHolder(ViewGroup parent, int type){
+    public recyclerViewAdapter.viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int type){
         //Log.d(TAG, "onCreateViewHolder has been called");
         View v =  LayoutInflater.from(parent.getContext()).
                 inflate(R.layout.recycler_view_search_page, parent, false);
 
-        viewHolder vh = new viewHolder(v);
-        return vh;
+        return new viewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(viewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         //Log.d(TAG, "onBindViewHolder has been called");
         holder.foodNameText.setText(dataSet.get(position).getName());
         holder.caloriesText.setText(String.format(Integer.toString(dataSet.get(position).getCalories())));
